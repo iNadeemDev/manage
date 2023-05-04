@@ -52,7 +52,7 @@ var wafy_isSetReadingGuide = false;
 
 (async function(apiKey) {
     try {
-      const response = await fetch('https://serve.webaccessify.com/wafy/configs?apiKey='+apiKey, {
+      const response = await fetch('https://manage.cyclic.app/wafy/configs?apiKey='+apiKey, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ function WafyLoadWidget(wafy_config_data) {
     var wafy_css_link = document.createElement('link');
     wafy_css_link.rel = 'stylesheet';
     wafy_css_link.type = 'text/css';
-    wafy_css_link.href = 'https://serve.webaccessify.com/wafy.css';
+    wafy_css_link.href = 'https://manage.cyclic.app/wafy.css';
     wafy_head.appendChild(wafy_css_link);
     ////////////////////////////////////
 
