@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({limit:"30mb", extended: true})); // it parses inc
 // app.use(cors());
 
 // Allow access from the dashboard domain
-var whitelist = ['https://dashboard.webaccessify.com']
+var whitelist = ['https://webaccessify.com', 'https://dashboard.webaccessify.com']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -24,7 +24,7 @@ var corsOptions = {
     }
   }
 }
-app.use(cors({ origin: '', credentials: true }));
+app.use(cors({ origin: '*', credentials: true }));
 
 // middlewares for allowing files for requests
 app.use('/wafy.css', express.static('wafy/css/wafy.css'))
@@ -36,7 +36,7 @@ app.use('/user/api/v1/', userRoutes);
 // Routes convention for service APIs
 app.use('/wafy/', serviceRoutes);
 app.get('/', (req, res, next) => {
-  res.send("Serverrr is runnninggg!!")
+  res.send("You've hit the jackpot! 🎉 Your prize is a virtual pat on the back 👏. Good job! 👍")
 });
 
 // Now, its time to connect real database 
