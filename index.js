@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({limit:"30mb", extended: true})); // it parses inc
 // app.use(cors());
 
 // Allow access from the dashboard domain
-var whitelist = ['https://webaccessify.com', 'https://dashboard.webaccessify.com']
+var whitelist = ['https://dashboard.webaccessify.com']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -24,7 +24,7 @@ var corsOptions = {
     }
   }
 }
-app.use(cors({ origin: '*', credentials: true }));
+app.use(cors({ origin: corsOptions, credentials: true }));
 
 // middlewares for allowing files for requests
 app.use('/wafy.css', express.static('wafy/css/wafy.css'))
