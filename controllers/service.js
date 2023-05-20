@@ -62,13 +62,15 @@ export const getScript = async (req, res) => {
         console.log(user)
         if (user) {
             // res.sendFile(path.join(__dirname, '../wafy/js/App.js'));
-            const template = fs.readFileSync(path.join(__dirname, '../wafy/js/App.js'), 'utf8');
+            const template = fs.readFileSync(path.join(__dirname, '../wafy/js/widgetObfuscated.js'), 'utf8');
             const rendered = template.replace('var apiKey = null;', `var apiKey = '${apiKey}';`);
 
             // Send the rendered file to the client
             res.send(rendered);
-            console.log(`origin= ${origin}`)
-            console.log(`referer= ${referrer}`)
+
+            // origin and referrer
+            //console.log(`origin= ${origin}`)
+            //console.log(`referer= ${referrer}`)
         } else {
             res.status(401).send('Unauthorized');
         }
