@@ -511,8 +511,8 @@ function WafyLoadWidget(wafy_config_data) {
     const wafy_monochrome = document.getElementById('wafy-monochrome');
     const wafy_high_saturation = document.getElementById('wafy-high-saturation');
     const wafy_low_saturation = document.getElementById('wafy-low-saturation');
-    const wafy_text_color = document.getElementById('wafy-text-color');
-    const wafy_background_color = document.getElementById('wafy-background-color');
+    //const wafy_text_color = document.getElementById('wafy-text-color');
+    //const wafy_background_color = document.getElementById('wafy-background-color');
 
     // Alignment features
     const wafy_font_size = document.getElementById('wafy-font-size');
@@ -1387,38 +1387,38 @@ function WafyLoadWidget(wafy_config_data) {
     });
 
     // text color feature
-    wafy_text_color.addEventListener('click', () => {
+    // wafy_text_color.addEventListener('click', () => {
 
-        if (wafy_isSetTextColor == false) {
-            wafy_isSetTextColor = true;
-            wafy_text_color.classList.add('wafy-active-feature')
+    //     if (wafy_isSetTextColor == false) {
+    //         wafy_isSetTextColor = true;
+    //         wafy_text_color.classList.add('wafy-active-feature')
 
-            // activating text color
-        }
-        else {
-            wafy_isSetTextColor = false;
-            wafy_text_color.classList.remove('wafy-active-feature')
+    //         // activating text color
+    //     }
+    //     else {
+    //         wafy_isSetTextColor = false;
+    //         wafy_text_color.classList.remove('wafy-active-feature')
 
-            // deactivating text color
-        }
-    });
+    //         // deactivating text color
+    //     }
+    // });
 
     // background color feature
-    wafy_background_color.addEventListener('click', () => {
+    // wafy_background_color.addEventListener('click', () => {
 
-        if (wafy_isSetBgColor == false) {
-            wafy_isSetBgColor = true;
-            wafy_background_color.classList.add('wafy-active-feature')
+    //     if (wafy_isSetBgColor == false) {
+    //         wafy_isSetBgColor = true;
+    //         wafy_background_color.classList.add('wafy-active-feature')
 
-            // activating background color
-        }
-        else {
-            wafy_isSetBgColor = false;
-            wafy_background_color.classList.remove('wafy-active-feature')
+    //         // activating background color
+    //     }
+    //     else {
+    //         wafy_isSetBgColor = false;
+    //         wafy_background_color.classList.remove('wafy-active-feature')
 
-            // deactivating background color
-        }
-    });
+    //         // deactivating background color
+    //     }
+    // });
 
 
     // ####### Alignments Items ####### //
